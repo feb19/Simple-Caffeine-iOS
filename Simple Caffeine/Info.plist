@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>このアプリでは、摂取したカフェインの量を「ヘルスケア」アプリに書き込みます。</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>摂取したカフェインの量を「ヘルスケア」アプリから取得し、一覧いただけるようにのみ使用します。</string>
 </dict>
 </plist>

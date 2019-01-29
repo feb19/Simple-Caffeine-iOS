@@ -12,9 +12,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
+        register()
     }
-
+    
+    private func register() {
+        HealthKitManager.shared.register { (e) in
+            if e != nil {
+                // display error
+            } else {
+            }
+        }
+    }
+    
+    @IBAction func addCaffeineButtonWasTapped(_ sender: UIButton) {
+        HealthKitManager.shared.writeCaffeine(value: 60.0)
+    }
 
 }
 
