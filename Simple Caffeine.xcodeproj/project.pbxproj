@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4629A38B2201BE6A004134FA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4629A38A2201BE6A004134FA /* ItemCell.swift */; };
+		4629A38D2201C127004134FA /* ItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4629A38C2201C127004134FA /* ItemData.swift */; };
+		4629A38F2201C1E1004134FA /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4629A38E2201C1E1004134FA /* ItemManager.swift */; };
+		46D8A3C02200825C00653C22 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8A3BF2200825C00653C22 /* SupportViewController.swift */; };
+		46D8A3C22200850A00653C22 /* HealthKitErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D8A3C12200850A00653C22 /* HealthKitErrorViewController.swift */; };
 		ED10EE7A21FFD2F10093B7FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10EE7921FFD2F10093B7FB /* AppDelegate.swift */; };
 		ED10EE7C21FFD2F10093B7FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED10EE7B21FFD2F10093B7FB /* ViewController.swift */; };
 		ED10EE7F21FFD2F10093B7FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED10EE7D21FFD2F10093B7FB /* Main.storyboard */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4629A38A2201BE6A004134FA /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		4629A38C2201C127004134FA /* ItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemData.swift; sourceTree = "<group>"; };
+		4629A38E2201C1E1004134FA /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
+		46D8A3BF2200825C00653C22 /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		46D8A3C12200850A00653C22 /* HealthKitErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitErrorViewController.swift; sourceTree = "<group>"; };
 		ED10EE7621FFD2F10093B7FB /* Simple Caffeine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Caffeine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED10EE7921FFD2F10093B7FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED10EE7B21FFD2F10093B7FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,13 +72,18 @@
 			isa = PBXGroup;
 			children = (
 				ED10EE8D21FFD4400093B7FB /* Simple Caffeine.entitlements */,
-				ED10EE8B21FFD3A20093B7FB /* HealthKitManager.swift */,
+				ED10EE8521FFD2F30093B7FB /* Info.plist */,
 				ED10EE7921FFD2F10093B7FB /* AppDelegate.swift */,
+				46D8A3C12200850A00653C22 /* HealthKitErrorViewController.swift */,
+				ED10EE8B21FFD3A20093B7FB /* HealthKitManager.swift */,
+				4629A38A2201BE6A004134FA /* ItemCell.swift */,
+				4629A38C2201C127004134FA /* ItemData.swift */,
+				4629A38E2201C1E1004134FA /* ItemManager.swift */,
+				46D8A3BF2200825C00653C22 /* SupportViewController.swift */,
 				ED10EE7B21FFD2F10093B7FB /* ViewController.swift */,
-				ED10EE7D21FFD2F10093B7FB /* Main.storyboard */,
 				ED10EE8021FFD2F30093B7FB /* Assets.xcassets */,
 				ED10EE8221FFD2F30093B7FB /* LaunchScreen.storyboard */,
-				ED10EE8521FFD2F30093B7FB /* Info.plist */,
+				ED10EE7D21FFD2F10093B7FB /* Main.storyboard */,
 			);
 			path = "Simple Caffeine";
 			sourceTree = "<group>";
@@ -157,8 +172,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4629A38D2201C127004134FA /* ItemData.swift in Sources */,
 				ED10EE7C21FFD2F10093B7FB /* ViewController.swift in Sources */,
+				46D8A3C22200850A00653C22 /* HealthKitErrorViewController.swift in Sources */,
+				4629A38B2201BE6A004134FA /* ItemCell.swift in Sources */,
 				ED10EE7A21FFD2F10093B7FB /* AppDelegate.swift in Sources */,
+				4629A38F2201C1E1004134FA /* ItemManager.swift in Sources */,
+				46D8A3C02200825C00653C22 /* SupportViewController.swift in Sources */,
 				ED10EE8C21FFD3A20093B7FB /* HealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,10 +333,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.feb19.Simple-Caffeine";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.feb19.simplecaffeine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,10 +352,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.feb19.Simple-Caffeine";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.feb19.simplecaffeine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

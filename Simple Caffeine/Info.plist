@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>摂取したカフェインの量をご覧いただけるようにする用途のみこのアプリで使用されます。</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>摂取したカフェインの量を「ヘルスケア」アプリに書き込むにの必要です。</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -31,8 +35,7 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -41,9 +44,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>このアプリでは、摂取したカフェインの量を「ヘルスケア」アプリに書き込みます。</string>
-	<key>NSHealthShareUsageDescription</key>
-	<string>摂取したカフェインの量を「ヘルスケア」アプリから取得し、一覧いただけるようにのみ使用します。</string>
 </dict>
 </plist>
