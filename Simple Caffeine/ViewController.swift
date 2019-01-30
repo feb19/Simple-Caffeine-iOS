@@ -33,25 +33,31 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if e != nil {
                 self.showError(error: e!)
             } else {
-                HealthKitManager.shared.getCaffeines(completion: { (error) in
-                    if let e = error { self.showError(error: e) }
-                    DispatchQueue.main.async {
-                        self.myCaffeineTodayLabel.text = "\(HealthKitManager.shared.caffeinesOfToday) mg"
-                        self.myCaffeineYesterdayLabel.text = "\(HealthKitManager.shared.caffeinesOfYesterday) mg"
-                    }
-                })
+                self.loadCaffeine()
             }
         }
     }
     
+    func loadCaffeine() {
+        HealthKitManager.shared.getCaffeines(completion: { (error) in
+            if let e = error { self.showError(error: e) }
+            DispatchQueue.main.async {
+                self.myCaffeineTodayLabel.text = "\(HealthKitManager.shared.caffeinesOfToday) mg"
+                self.myCaffeineYesterdayLabel.text = "\(HealthKitManager.shared.caffeinesOfYesterday) mg"
+            }
+        })
+    }
+    
     @IBAction func saveButtonWasTapped(_ sender: UIButton) {
-        HealthKitManager.shared.writeCaffeine(value: 60.0) { (error) in
+        let value = NSNumber(value: ItemManager.shared.getValue()).doubleValue
+        HealthKitManager.shared.writeCaffeine(value: value) { (error) in
             if let e = error { self.showError(error: e) }
             DispatchQueue.main.async {
                 // saved
                 ItemManager.shared.clear()
                 self.reloadValueLabel()
                 self.itemCollectionView.reloadData()
+                self.loadCaffeine()
             }
         }
     }

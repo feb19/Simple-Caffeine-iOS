@@ -36,40 +36,40 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item_coffee" translatesAutoresizingMaskIntoConstraints="NO" id="fn4-Rd-6oI">
-                                                    <rect key="frame" x="9" y="12" width="96" height="96"/>
+                                                    <rect key="frame" x="7" y="12" width="96" height="96"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="kag-o1-bvl"/>
                                                         <constraint firstAttribute="width" constant="96" id="yXb-qA-EGI"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VY6-wa-52p">
-                                                    <rect key="frame" x="0.0" y="112" width="114" height="22"/>
+                                                    <rect key="frame" x="0.0" y="112" width="110" height="22"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                                     <color key="textColor" red="0.40000000000000002" green="0.23529411764705882" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snl-co-VgE">
-                                                    <rect key="frame" x="43.5" y="134" width="27" height="14"/>
+                                                    <rect key="frame" x="41.5" y="134" width="27" height="14"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="10"/>
                                                     <color key="textColor" red="0.40000000000000002" green="0.23529411759999999" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkF-SW-5Ya">
-                                                    <rect key="frame" x="5" y="156" width="44" height="44"/>
+                                                    <rect key="frame" x="3" y="156" width="44" height="44"/>
                                                     <state key="normal" image="button_minus"/>
                                                     <connections>
                                                         <action selector="minusButtonWasTapped:" destination="B8K-8I-n2z" eventType="touchUpInside" id="wPg-Vs-K53"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5o9-KJ-99x">
-                                                    <rect key="frame" x="64.5" y="156" width="45" height="44"/>
+                                                    <rect key="frame" x="62.5" y="156" width="45" height="44"/>
                                                     <state key="normal" image="button_plus"/>
                                                     <connections>
                                                         <action selector="plusButtonWasTapped:" destination="B8K-8I-n2z" eventType="touchUpInside" id="hqc-bs-wLW"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHM-Wq-is6">
-                                                    <rect key="frame" x="89" y="2" width="24" height="24"/>
+                                                    <rect key="frame" x="85" y="2" width="24" height="24"/>
                                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="ARa-Dl-tA8"/>
@@ -88,7 +88,7 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="gHM-Wq-is6" firstAttribute="trailing" secondItem="fn4-Rd-6oI" secondAttribute="trailing" constant="8" id="97t-1Z-n38"/>
+                                            <constraint firstItem="gHM-Wq-is6" firstAttribute="trailing" secondItem="fn4-Rd-6oI" secondAttribute="trailing" constant="6" id="97t-1Z-n38"/>
                                             <constraint firstItem="5o9-KJ-99x" firstAttribute="top" secondItem="snl-co-VgE" secondAttribute="bottom" constant="8" id="CcW-5r-5cs"/>
                                             <constraint firstAttribute="trailing" secondItem="VY6-wa-52p" secondAttribute="trailing" id="Hl8-FK-irX"/>
                                             <constraint firstItem="snl-co-VgE" firstAttribute="centerX" secondItem="B8K-8I-n2z" secondAttribute="centerX" id="Ppg-LI-lZb"/>
