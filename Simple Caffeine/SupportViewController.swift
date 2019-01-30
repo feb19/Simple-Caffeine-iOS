@@ -15,8 +15,11 @@ class SupportViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if indexPath.section == 1, indexPath.row == 0 {
+        if indexPath.section == 0, indexPath.row == 0 {
             goPrivacyPolicy()
+        }
+        if indexPath.section == 0, indexPath.row == 1 {
+            goReview()
         }
     }
     
@@ -31,6 +34,8 @@ class SupportViewController: UITableViewController {
     }
     
     func goReview() {
-        
+        if let url = URL(string: "https://itunes.apple.com/us/app/itunes-u/id1451062048?action=write-review") {
+            UIApplication.shared.open(url)
+        }
     }
 }
