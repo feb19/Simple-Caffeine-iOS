@@ -15,42 +15,19 @@ class ItemManager {
     var items = Array<ItemData>()
     
     init () {
-        var item = ItemData()
-        item.title = "Drip Coffee"
-        item.quantity = "250 ml"
-        item.imageName = "item_coffee"
-        item.caffeine = 90
-        masterData.append(item)
-        
-        var item3 = ItemData()
-        item3.title = "Coke"
-        item3.quantity = "355 ml"
-        item3.imageName = "item_coke"
-        item3.caffeine = 40
-        masterData.append(item3)
-        
-        var item4 = ItemData()
-        item4.title = "Redbull Short"
-        item4.quantity = "185 ml"
-        item4.imageName = "item_redbull"
-        item4.caffeine = 80
-        masterData.append(item4)
-        
-        var item5 = ItemData()
-        item5.title = "Redbull Long"
-        item5.quantity = "250 ml"
-        item5.imageName = "item_redbull"
-        item5.caffeine = 80
-        masterData.append(item5)
-        
-        var item2 = ItemData()
-        item2.title = "MonsterEnergy"
-        item2.quantity = "355 ml"
-        item2.imageName = "item_monsterenergy"
-        item2.caffeine = 142
-        masterData.append(item2)
-        
-        
+        let path = Bundle.main.path(forResource: "Item", ofType:"plist" )
+        if let dictArray = NSArray(contentsOfFile: path!) {
+            for item in dictArray {
+                if let dict = item as? NSDictionary {
+                    let title = dict["title"] as! String
+                    let quantity = dict["quantity"] as! String
+                    let imageName = dict["imageName"] as! String
+                    let caffeine = dict["caffeine"] as! Int
+                    let item = ItemData(title: title, quantity: quantity, imageName: imageName, caffeine: caffeine)
+                    masterData.append(item)
+                }
+            }
+        }
     }
     
     func getCount() -> Int {

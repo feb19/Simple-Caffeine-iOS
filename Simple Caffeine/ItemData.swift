@@ -13,5 +13,16 @@ struct ItemData {
     var quantity: String = "0 ml"
     var imageName: String = "item_coffee"
     var caffeine = 120
+    
+    init() {
+        
+    }
+    
+    init(title: String, quantity: String, imageName: String, caffeine: Int) {
+        self.title = title
+        self.quantity = quantity
+        self.imageName = imageName
+        self.caffeine = caffeine
+    }
 }
 

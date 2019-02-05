@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Drip Coffee</string>
+		<key>quantity</key>
+		<string>250 ml</string>
+		<key>imageName</key>
+		<string>item_coffee</string>
+		<key>caffeine</key>
+		<integer>90</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Coke</string>
+		<key>quantity</key>
+		<string>355 ml</string>
+		<key>imageName</key>
+		<string>item_coke</string>
+		<key>caffeine</key>
+		<integer>40</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Redbull Short</string>
+		<key>quantity</key>
+		<string>185 ml</string>
+		<key>imageName</key>
+		<string>item_redbull</string>
+		<key>caffeine</key>
+		<integer>80</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Redbull Long</string>
+		<key>quantity</key>
+		<string>250 ml</string>
+		<key>imageName</key>
+		<string>item_redbull</string>
+		<key>caffeine</key>
+		<integer>80</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>MonsterEnergy</string>
+		<key>quantity</key>
+		<string>355 ml</string>
+		<key>imageName</key>
+		<string>item_monsterenergy</string>
+		<key>caffeine</key>
+		<integer>80</integer>
+	</dict>
+</array>
+</plist>

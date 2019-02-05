@@ -42,7 +42,7 @@ class ItemCell: UICollectionViewCell {
         delegate.itemValueWasChanged(cell: self)
     }
     @IBAction func minusButtonWasTapped(_ sender: UIButton) {
-        ItemManager.shared.minus(item: self.item)
+        let _ = ItemManager.shared.minus(item: self.item)
         
         delegate.itemValueWasChanged(cell: self)
     }
