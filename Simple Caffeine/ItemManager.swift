@@ -38,6 +38,15 @@ class ItemManager {
         return masterData[index]
     }
     
+    func getData(title: String) -> ItemData? {
+        for i in 0..<masterData.count {
+            if masterData[i].title == title {
+                return masterData[i]
+            }
+        }
+        return nil
+    }
+    
     func getAmount(item: ItemData) -> Int {
         var totalAmount = 0
         for i in 0..<items.count {

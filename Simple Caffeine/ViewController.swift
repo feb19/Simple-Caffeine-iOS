@@ -25,7 +25,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         register()
         
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.loadCaffeine()
     }
     
     private func register() {

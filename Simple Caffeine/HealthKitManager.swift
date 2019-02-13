@@ -8,7 +8,7 @@
 
 import Foundation
 import HealthKit
-import HealthKitUI
+//import HealthKitUI
 
 class HealthKitManager {
     static let shared = HealthKitManager()
