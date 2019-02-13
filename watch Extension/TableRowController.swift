@@ -12,4 +12,5 @@ import WatchKit
 class TableRowController: NSObject {
     @IBOutlet weak var image: WKInterfaceImage!
     @IBOutlet weak var label: WKInterfaceLabel!
+    @IBOutlet weak var descriptionLabel: WKInterfaceLabel!
 }

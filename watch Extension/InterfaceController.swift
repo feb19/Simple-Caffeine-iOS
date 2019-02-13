@@ -43,6 +43,10 @@ class InterfaceController: WKInterfaceController {
 //                self.itemCollectionView.reloadData()
 //                self.loadCaffeine()
 //            }
+            
+            let buttonAction = WKAlertAction(title:"OK", style: .default) { () -> Void in
+            }
+            self.presentAlert(withTitle: "OK", message: "登録しました", preferredStyle: WKAlertControllerStyle.alert, actions: [buttonAction])
         }
     }
     
@@ -58,6 +62,7 @@ class InterfaceController: WKInterfaceController {
         for (index, val) in items.enumerated() {
             let row = table.rowController(at: index) as! TableRowController
             row.label.setText(val.title)
+            row.descriptionLabel.setText(val.quantity)
             row.image.setImageNamed(val.imageName)
         }
         HealthKitManager.shared.register { (error) in

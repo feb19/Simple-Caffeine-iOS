@@ -13,16 +13,24 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watch" customModuleProvider="target">
                     <items>
-                        <table alignment="left" id="kei-GO-E6C">
+                        <table alignment="left" spacing="4" id="kei-GO-E6C">
                             <items>
                                 <tableRow identifier="TableRowController" id="Qa6-W0-FT3" customClass="TableRowController" customModule="watch_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="xGI-0v-DCy">
+                                    <group key="rootItem" width="1" height="38" alignment="left" spacing="4" id="xGI-0v-DCy">
                                         <items>
-                                            <imageView alignment="left" image="item_coffee" id="urY-Cp-muP"/>
-                                            <label alignment="left" text="Label" id="tkq-0N-zgi"/>
+                                            <imageView width="40" height="40" alignment="left" contentMode="scaleAspectFit" id="urY-Cp-muP"/>
+                                            <group width="1" alignment="left" layout="vertical" spacing="0.0" id="jcE-Up-nlz">
+                                                <items>
+                                                    <label alignment="left" text="Label" id="tkq-0N-zgi"/>
+                                                    <label alignment="left" verticalAlignment="bottom" text="Label" id="brR-4s-Uec">
+                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                    </label>
+                                                </items>
+                                            </group>
                                         </items>
                                     </group>
                                     <connections>
+                                        <outlet property="descriptionLabel" destination="brR-4s-Uec" id="B01-5P-fCR"/>
                                         <outlet property="image" destination="urY-Cp-muP" id="h8u-en-C54"/>
                                         <outlet property="label" destination="tkq-0N-zgi" id="riG-yP-bKT"/>
                                     </connections>
