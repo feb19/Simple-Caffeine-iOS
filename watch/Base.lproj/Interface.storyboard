@@ -16,10 +16,10 @@
                         <table alignment="left" spacing="4" id="kei-GO-E6C">
                             <items>
                                 <tableRow identifier="TableRowController" id="Qa6-W0-FT3" customClass="TableRowController" customModule="watch_Extension">
-                                    <group key="rootItem" width="1" height="38" alignment="left" spacing="4" id="xGI-0v-DCy">
+                                    <group key="rootItem" width="1" height="50" alignment="left" spacing="4" id="xGI-0v-DCy">
                                         <items>
-                                            <imageView width="40" height="40" alignment="left" contentMode="scaleAspectFit" id="urY-Cp-muP"/>
-                                            <group width="1" alignment="left" layout="vertical" spacing="0.0" id="jcE-Up-nlz">
+                                            <imageView width="40" height="40" alignment="left" verticalAlignment="center" contentMode="scaleAspectFit" id="urY-Cp-muP"/>
+                                            <group width="1" alignment="left" verticalAlignment="center" layout="vertical" spacing="0.0" id="jcE-Up-nlz">
                                                 <items>
                                                     <label alignment="left" text="Label" id="tkq-0N-zgi"/>
                                                     <label alignment="left" verticalAlignment="bottom" text="Label" id="brR-4s-Uec">

@@ -37,6 +37,7 @@ class HealthKitManager {
     var caffeinesOfToday = 0
     
     func getCaffeines(completion: ((_ error:Error?) -> Void)!) {
+        print("getCaffeines")
         let count = HKUnit.gramUnit(with: HKMetricPrefix.milli)
         let type = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCaffeine)
         let now = Date()

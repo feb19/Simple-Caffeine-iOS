@@ -51,6 +51,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         })
     }
     
+    @IBAction func refreshButtonWasTapped(_ sender: Any) {
+        loadCaffeine()
+        
+    }
+    
     @IBAction func saveButtonWasTapped(_ sender: UIButton) {
         let value = NSNumber(value: ItemManager.shared.getValue()).doubleValue
         HealthKitManager.shared.writeCaffeine(value: value) { (error) in

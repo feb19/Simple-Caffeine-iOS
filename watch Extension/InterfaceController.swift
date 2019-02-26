@@ -46,7 +46,8 @@ class InterfaceController: WKInterfaceController {
             
             let buttonAction = WKAlertAction(title:"OK", style: .default) { () -> Void in
             }
-            self.presentAlert(withTitle: "OK", message: "登録しました", preferredStyle: WKAlertControllerStyle.alert, actions: [buttonAction])
+            
+            self.presentAlert(withTitle: "\(item.caffeine)mg", message: "登録しました", preferredStyle: WKAlertControllerStyle.alert, actions: [buttonAction])
         }
     }
     

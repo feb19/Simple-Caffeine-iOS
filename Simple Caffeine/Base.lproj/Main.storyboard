@@ -169,6 +169,13 @@
                                     <segue destination="T8J-WQ-93r" kind="presentation" id="viY-hq-FjA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDy-tI-TVM">
+                                <rect key="frame" x="10" y="28" width="26" height="26"/>
+                                <state key="normal" image="button_refresh"/>
+                                <connections>
+                                    <action selector="refreshButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xKV-v3-3hG"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ccj-le-gt1">
                                 <rect key="frame" x="0.0" y="437" width="375" height="230"/>
                                 <subviews>
@@ -268,7 +275,9 @@
                             <constraint firstItem="Sa2-X2-ZOu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DIK-xC-RxI"/>
                             <constraint firstItem="Sa2-X2-ZOu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FUv-Fp-2fH"/>
                             <constraint firstItem="ICL-0q-OJX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="IOC-tW-rZX"/>
+                            <constraint firstItem="qDy-tI-TVM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="MFj-dJ-Sge"/>
                             <constraint firstItem="l2n-oX-QlM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PcH-Yj-4xf"/>
+                            <constraint firstItem="qDy-tI-TVM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="8" id="SD7-mZ-asO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ICL-0q-OJX" secondAttribute="trailing" constant="16" id="UWi-cq-WgE"/>
                             <constraint firstItem="Ccj-le-gt1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b5m-vT-fMS"/>
                             <constraint firstItem="Ccj-le-gt1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eqr-38-POq"/>
@@ -541,6 +550,7 @@
         <image name="button_info" width="26" height="26"/>
         <image name="button_minus" width="44" height="44"/>
         <image name="button_plus" width="45" height="44"/>
+        <image name="button_refresh" width="26" height="26"/>
         <image name="craftedby" width="125" height="64"/>
         <image name="error_healthkit1" width="77" height="77"/>
         <image name="error_healthkit2" width="77" height="77"/>
