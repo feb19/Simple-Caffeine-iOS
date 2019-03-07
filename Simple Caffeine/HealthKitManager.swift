@@ -8,12 +8,29 @@
 
 import Foundation
 import HealthKit
-//import HealthKitUI
+
+protocol HealthKitManagerDelegate {
+    func databaseWasUpdate(healthKitManager: HealthKitManager)
+}
 
 class HealthKitManager {
     static let shared = HealthKitManager()
     private let store = HKHealthStore()
     private var workouts = [HKWorkout]()
+    
+    var caffeinesOfYesterday = 0
+    var caffeinesOfToday = 0
+    var delegates: [HealthKitManagerDelegate?] = []
+    
+    func add(delegate: HealthKitManagerDelegate) {
+        delegates.append(delegate)
+    }
+    
+    func updateDelegate() {
+        for delegate in delegates {
+            delegate?.databaseWasUpdate(healthKitManager: self)
+        }
+    }
     
     func register(completion: ((_ error:Error?) -> Void)!) {
         let readToType = Set(arrayLiteral:
@@ -33,8 +50,16 @@ class HealthKitManager {
         }
     }
     
-    var caffeinesOfYesterday = 0
-    var caffeinesOfToday = 0
+    func setObserver() {
+        print("execute observerQuery")
+        let type = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryCaffeine)!
+        let observerQuery: HKObserverQuery = HKObserverQuery(sampleType: type, predicate: nil) { (query: HKObserverQuery, completion: HKObserverQueryCompletionHandler, error: Error?) in
+            print("database was updated")
+            self.updateDelegate()
+        }
+        
+        store.execute(observerQuery)
+    }
     
     func getCaffeines(completion: ((_ error:Error?) -> Void)!) {
         print("getCaffeines")

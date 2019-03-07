@@ -9,7 +9,7 @@
 import UIKit
 import HealthKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ItemCellDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, ItemCellDelegate, HealthKitManagerDelegate {
     
 
     @IBOutlet weak var myCaffeineTodayLabel: UILabel!
@@ -24,11 +24,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         itemCollectionView.dataSource = self
         
         register()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.loadCaffeine()
+        loadCaffeine()
     }
     
     private func register() {
@@ -37,6 +36,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 self.showError(error: e!)
             } else {
                 self.loadCaffeine()
+                HealthKitManager.shared.add(delegate: self)
+                HealthKitManager.shared.setObserver()
             }
         }
     }
@@ -53,7 +54,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBAction func refreshButtonWasTapped(_ sender: Any) {
         loadCaffeine()
-        
     }
     
     @IBAction func saveButtonWasTapped(_ sender: UIButton) {
@@ -62,18 +62,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if let e = error { self.showError(error: e) }
             DispatchQueue.main.async {
                 // saved
-                ItemManager.shared.clear()
-                self.reloadValueLabel()
-                self.itemCollectionView.reloadData()
+                self.updateView()
                 self.loadCaffeine()
             }
         }
     }
     
-    @IBAction func clearButtonWasTapped(_ sender: UIButton) {
+    func updateView() {
         ItemManager.shared.clear()
         reloadValueLabel()
-        self.itemCollectionView.reloadData()
+        itemCollectionView.reloadData()
+    }
+    
+    @IBAction func clearButtonWasTapped(_ sender: UIButton) {
+        updateView()
     }
     
     func showError(error: Error) {
@@ -113,6 +115,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         newCaffeineValueLabel.text = "\(value)"
     }
     
-
+    // MARK: -
+    // MARK: HealthKitManagerDelegate
+    
+    func databaseWasUpdate(healthKitManager: HealthKitManager) {
+        loadCaffeine()
+    }
 }
 
