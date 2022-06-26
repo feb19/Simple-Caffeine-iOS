@@ -14,6 +14,16 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>Green Tea</string>
+		<key>quantity</key>
+		<string>100 ml</string>
+		<key>imageName</key>
+		<string>item_greentea</string>
+		<key>caffeine</key>
+		<integer>20</integer>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>Coke</string>
 		<key>quantity</key>
 		<string>355 ml</string>

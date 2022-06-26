@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "item_greentea.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -13,14 +13,6 @@ import HealthKit
 class InterfaceController: WKInterfaceController {
     @IBOutlet weak var table: WKInterfaceTable!
     
-    var items = [
-        "hoge",
-        "hoge2",
-        "hoge3",
-        "hoge4",
-        "hoge5"
-    ]
-    
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         let item = ItemManager.shared.getData(index: rowIndex)
         save(item: item)
