@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,7 @@
 		ED10EE9021FFD4400093B7FB /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED10EE8F21FFD4400093B7FB /* HealthKit.framework */; };
 		ED79463022130D96004237DA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED79462E22130D96004237DA /* Interface.storyboard */; };
 		ED79463222130D98004237DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED79463122130D98004237DA /* Assets.xcassets */; };
-		ED79463922130D98004237DA /* watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ED79463822130D98004237DA /* watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED79463922130D98004237DA /* watch Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = ED79463822130D98004237DA /* watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ED79463E22130D98004237DA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED79463D22130D98004237DA /* InterfaceController.swift */; };
 		ED79464022130D98004237DA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED79463F22130D98004237DA /* ExtensionDelegate.swift */; };
 		ED79464222130D98004237DA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED79464122130D98004237DA /* NotificationController.swift */; };
@@ -55,15 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		ED79465122130D99004237DA /* Embed App Extensions */ = {
+		ED79465122130D99004237DA /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				ED79463922130D98004237DA /* watch Extension.appex in Embed App Extensions */,
+				ED79463922130D98004237DA /* watch Extension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		ED79465322130D99004237DA /* Embed Watch Content */ = {
@@ -199,15 +199,15 @@
 		ED79463C22130D98004237DA /* watch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				ED79465722139509004237DA /* watch Extension.entitlements */,
-				ED79463D22130D98004237DA /* InterfaceController.swift */,
-				ED79463F22130D98004237DA /* ExtensionDelegate.swift */,
-				ED79464122130D98004237DA /* NotificationController.swift */,
-				ED79464322130D98004237DA /* ComplicationController.swift */,
-				ED79464522130D99004237DA /* Assets.xcassets */,
-				ED79464722130D99004237DA /* Info.plist */,
 				ED79464822130D99004237DA /* PushNotificationPayload.apns */,
+				ED79465722139509004237DA /* watch Extension.entitlements */,
+				ED79464722130D99004237DA /* Info.plist */,
+				ED79464322130D98004237DA /* ComplicationController.swift */,
+				ED79463F22130D98004237DA /* ExtensionDelegate.swift */,
+				ED79463D22130D98004237DA /* InterfaceController.swift */,
+				ED79464122130D98004237DA /* NotificationController.swift */,
 				ED79465422131745004237DA /* TableRowController.swift */,
+				ED79464522130D99004237DA /* Assets.xcassets */,
 			);
 			path = "watch Extension";
 			sourceTree = "<group>";
@@ -239,7 +239,7 @@
 			buildConfigurationList = ED79465222130D99004237DA /* Build configuration list for PBXNativeTarget "watch" */;
 			buildPhases = (
 				ED79462A22130D95004237DA /* Resources */,
-				ED79465122130D99004237DA /* Embed App Extensions */,
+				ED79465122130D99004237DA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -274,8 +274,9 @@
 		ED10EE6E21FFD2F10093B7FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = feb19;
 				TargetAttributes = {
 					ED10EE7521FFD2F10093B7FB = {
@@ -569,7 +570,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.feb19.simplecaffeine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -591,7 +592,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.feb19.simplecaffeine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -611,7 +612,7 @@
 				DEVELOPMENT_TEAM = LPN23T94U7;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.feb19.simplecaffeine.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -633,7 +634,7 @@
 				DEVELOPMENT_TEAM = LPN23T94U7;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.feb19.simplecaffeine.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -657,7 +658,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.feb19.simplecaffeine.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -681,7 +682,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.feb19.simplecaffeine.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;

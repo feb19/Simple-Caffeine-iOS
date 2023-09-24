@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSHealthShareUsageDescription</key>
-	<string>摂取したカフェインの量をご覧いただけるようにする用途のみこのアプリで使用されます。</string>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>摂取したカフェインの量を「ヘルスケア」アプリに書き込むにの必要です。</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -50,6 +46,10 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>摂取したカフェインの量をご覧いただけるようにする用途のみこのアプリで使用されます。</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>摂取したカフェインの量を「ヘルスケア」アプリに書き込むにの必要です。</string>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 </dict>
